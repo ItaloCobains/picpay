@@ -3,8 +3,6 @@ package picpay.desafio.picpay.domain.transaction;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
-import org.springframework.boot.autoconfigure.security.SecurityProperties.User;
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -15,13 +13,16 @@ import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
+import picpay.desafio.picpay.domain.user.User;
 
 @Entity(name = "transactions")
 @Table(name = "transactions")
 @Getter
 @Setter
 @AllArgsConstructor
+@NoArgsConstructor
 @EqualsAndHashCode(of = "id")
 public class Transaction {
     @Id
